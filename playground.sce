@@ -1,6 +1,7 @@
 clear
 xdel(winsid());
 getd("C:\Users\coop2\Desktop\Code");
+
 //Variables
 Ioff=0.45; // Ion source vertical offset with respect to the target
 DIT=0; // Distance between ion source and target
@@ -20,5 +21,10 @@ for i = 1:size(ion_results(:,:,1),1)
     max_cosine_r(i) = [max_ionsource_particles * cos(ion_results(i,1,1)/max(ion_results(:,1,1)) * %pi/2)];
 end
 ion_results(:,:,3) = repmat(max_cosine_r', 1, size(angle_array, 2));
-plot(ion_results(:,1,1),ion_results(:,1,3),"b");
+//plot(ion_results(:,1,1),ion_results(:,1,3),"b");
 
+// calculating number of ions @ point P
+for
+    if
+        
+end
