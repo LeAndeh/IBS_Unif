@@ -12,3 +12,16 @@ What I needed to do:
 
 3) add substrate rotation
 => not yet implemented
+
+----------------------------------------------------------------------------------------------
+#Rewritten Tasks
+
+1. Emission Distribution of Ion Source, currently it is given a cosine distribution
+
+2. Calculate distance and angle between points - done via pen & paper
+
+3. For all points on the target, calculate the total ion flux (angular emission function)
+
+4. Calculate distance and angles between points
+
+5. For all points on the substrate, calculate total point flux
