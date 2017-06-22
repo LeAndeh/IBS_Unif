@@ -24,7 +24,7 @@ for i = 1:size(ion_source(:,:,1),1)
     max_cosine_r(i) = [max_ionsource_particles * cos(ion_source(i,1,1)/max(ion_source(:,1,1)) * %pi/2)]; //cosine distribution
 end
 ion_source(:,:,3) = repmat(max_cosine_r', 1, size(angle_array, 2));
-plot(ion_source(:,1,1),ion_source(:,1,3),"b");
+figure(1); plot(ion_source(:,1,1),ion_source(:,1,3),"b");
 
 // calculating number of ions @ point P
 myDelta=cos(TarAngle)*ion_source(:,:,1).*cos(ion_source(:,:,2));
@@ -63,4 +63,4 @@ Substrate(:,:,3)= (cos(Teta).^NEmission)./(r.^2) * sin(SubAngle);
 avg_Substrate = sum(Substrate(:,:,3),2) / size(Substrate(:,:,3),2)
 /*  sum(Substrate(:,:,3),2)  */
 UnifProfile=[PointR',avg_Substrate];
-plot(UnifProfile(:,1),UnifProfile(:,2),'r')
+figure(2); plot(UnifProfile(:,1),UnifProfile(:,2),'r')
