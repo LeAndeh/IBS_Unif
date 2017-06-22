@@ -28,6 +28,13 @@ myDelta=cos(TarAngle)*ion_source(:,:,1).*cos(ion_source(:,:,2));
 myEps=sin(TarAngle)*ion_source(:,:,1).*cos(ion_source(:,:,2));
 myRad=((DIT+myEps).^2+(Ioff-myDelta).^2+(ion_source(:,:,1).*sin(ion_source(:,:,2))).^2).^0.5;
 Phi=acos((DIT-myEps)./myRad);
-
 Target(:,:,1)=(cos(Phi).^IEmission)./(myRad.^2) * sin(TarAngle);
-disp(Target);
+
+//ion_sourcedim3 sum for each point P in Target?
+//implement a check for each respective Phi of ion_sourcedim3 does not match the set value, do not sum?
+// for -> if should work iterated over the size of _____???? size of what
+//
+//link target sum to the rest of program, but how
+//probably need to write a hook into, or would I replace the Substrate hypermatrix? as it is r x phi x deposition
+//phi would be replaced by well, Phi; probably via a for loop iterating over the size of the matrix dimensions
+//
